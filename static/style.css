@@ -1,0 +1,147 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f4f6fb 60%, #e3e9f7 100%);
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+.navbar {
+    background: #2a3a5e;
+    box-shadow: 0 2px 8px #d1d9e6;
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+.nav-logo {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+.nav-links button {
+    background: #fff;
+    color: #2a3a5e;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-links button:hover, .nav-links button.active {
+    background: #3b5998;
+    color: #fff;
+}
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px #d1d9e6;
+    padding: 40px 32px;
+}
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 24px;
+}
+.profile-pic {
+    width: 140px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #aaa;
+}
+.profile-info {
+    flex: 1;
+}
+.profile-info h1 {
+    margin: 0 0 8px 0;
+    font-size: 2.5rem;
+    color: #2a3a5e;
+}
+.profile-info p {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+}
+.links a {
+    margin-right: 16px;
+    color: #3b5998;
+    text-decoration: none;
+    font-weight: 500;
+}
+.links a:hover {
+    text-decoration: underline;
+}
+h2 {
+    color: #2a3a5e;
+    margin-top: 32px;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 6px;
+}
+ul, ol {
+    margin: 8px 0 16px 24px;
+}
+.section {
+    margin-bottom: 28px;
+    display: none;
+    animation: fadeIn 0.5s;
+}
+.section.active {
+    display: block;
+}
+.certs, .skills, .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.certs li, .skills li, .projects li {
+    background: #f0f4fa;
+    border-radius: 6px;
+    padding: 6px 14px;
+    margin-bottom: 6px;
+    list-style: none;
+    box-shadow: 0 1px 4px #e3e9f7;
+}
+.exp-role {
+    font-weight: bold;
+    color: #1a2a4f;
+}
+.exp-company {
+    color: #3b5998;
+    font-weight: 500;
+}
+.exp-date {
+    color: #888;
+    font-size: 0.95em;
+}
+.exp-list {
+    margin-top: 6px;
+}
+@media (max-width: 700px) {
+    .container { padding: 16px; }
+    .profile-header { flex-direction: column; gap: 12px; text-align: center; }
+    .profile-pic { width: 100px; }
+    .nav-container { flex-direction: column; gap: 8px; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
