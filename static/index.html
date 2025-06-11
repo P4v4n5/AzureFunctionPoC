@@ -5,92 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pavan Kumar Srinivasulu - Portfolio</title>
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <span class="nav-logo">Pavan Kumar Srinivasulu</span>
-            <ul class="nav-links">
-                <li><button onclick="navigateTo('about')">About</button></li>
-                <li><button onclick="navigateTo('certifications')">Certifications</button></li>
-                <li><button onclick="navigateTo('skills')">Skills</button></li>
-                <li><button onclick="navigateTo('education')">Education</button></li>
-                <li><button onclick="navigateTo('experience')">Experience</button></li>
-                <li><button onclick="navigateTo('projects')">Projects</button></li>
-            </ul>
+    <aside class="sidebar">
+        <div class="profile">
+            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Pavan's photo" class="profile-pic">
+            <h2>Pavan Kumar Srinivasulu</h2>
+            <p class="subtitle">Cloud & DevOps Engineer</p>
         </div>
-    </nav>
-    <div class="container">
+        <nav class="side-nav">
+            <ul>
+                <li><a href="#about" class="nav-link active"><i class="fa fa-user"></i> About</a></li>
+                <li><a href="#education" class="nav-link"><i class="fa fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#experience" class="nav-link"><i class="fa fa-briefcase"></i> Experience</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fa fa-folder-open"></i> Projects</a></li>
+                <li><a href="#skills" class="nav-link"><i class="fa fa-cogs"></i> Skills</a></li>
+                <li><a href="#certifications" class="nav-link"><i class="fa fa-certificate"></i> Certifications</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fa fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+        <div class="side-footer">
+            <a href="mailto:pavankumarrs099@gmail.com"><i class="fa fa-envelope"></i></a>
+            <a href="tel:+16692819218"><i class="fa fa-phone"></i></a>
+            <a href="https://www.linkedin.com/in/p4v4n/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/P4v4n5" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </aside>
+    <main class="main-content">
         <section id="about" class="section active">
-            <div class="profile-header">
-                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Pavan's photo" class="profile-pic">
-                <div class="profile-info">
-                    <h1>Pavan Kumar Srinivasulu</h1>
-                    <p>Email: <a href="mailto:pavankumarrs099@gmail.com">pavankumarrs099@gmail.com</a> | Phone: <a href="tel:+16692819218">+1 (669) 281-9218</a></p>
-                    <div class="links">
-                        <a href="https://www.linkedin.com/in/p4v4n/" target="_blank">LinkedIn</a>
-                        <a href="https://github.com/P4v4n5" target="_blank">GitHub</a>
-                        <a href="https://medium.com/@pavankumarrs099" target="_blank">Medium</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="certifications" class="section">
-            <h2>Certifications</h2>
-            <ul class="certs">
-                <li>AWS Certified Cloud Practitioner</li>
-                <li>Hashicorp Certified: Terraform Associate (003)</li>
-                <li>Salesforce: Certified Administrator</li>
-                <li>Salesforce: Certified AI Associate</li>
-                <li>Microsoft Certified: Azure Fundamentals</li>
-                <li>Sumo Logic: Fundamentals, Administration, Kubernetes, Metrics Mastery, Search Mastery, Security and Analytics Certified</li>
-            </ul>
-        </section>
-        <section id="skills" class="section">
-            <h2>Technology Stack</h2>
-            <ul class="skills">
-                <li>Python</li><li>Java</li><li>GoLang</li><li>SQL</li><li>Shell scripting</li><li>HTML</li><li>CSS</li>
-                <li>AWS (EC2, ECS, EKS, Lambda, S3, SES, CodePipeline, DataSync, FSx, EFS, Rekognition)</li>
-                <li>Azure (Compute, Storage, Database, DevOps)</li>
-                <li>Docker</li><li>Kubernetes</li><li>Helm</li><li>Terraform</li><li>Ansible</li>
-                <li>GitHub Actions</li><li>Bitbucket Pipelines</li><li>Azure DevOps</li>
-                <li>Snowflake</li><li>PostgreSQL</li><li>ETL pipelines</li><li>Pandas</li><li>NumPy</li><li>Apify API</li><li>Matplotlib</li><li>Plotly</li>
-                <li>Splunk</li><li>Sumo Logic</li><li>Datadog</li>
-                <li>OpenCV</li><li>Face Recognition</li>
-                <li>Linux (RedHat, Ubuntu, CentOS)</li><li>macOS</li><li>Windows</li>
-                <li>Wireshark</li><li>Django (REST APIs)</li><li>JIRA</li><li>Apify</li>
-            </ul>
+            <h1>About Me</h1>
+            <blockquote>"Cloud & DevOps Engineer with a passion for automation, scalable systems, and AI-powered solutions."</blockquote>
+            <p>I'm a Computer Science graduate student at Santa Clara University with professional experience in cloud, DevOps, automation, and backend engineering. I love building scalable, reliable, and efficient solutions using modern cloud and DevOps tools.</p>
         </section>
         <section id="education" class="section">
-            <h2>Education</h2>
-            <p><strong>Santa Clara University, Santa Clara, California</strong> (Sep 2023 – Jun 2025)<br>
-            Master of Science in Computer Science and Engineering (GPA: 3.85/4.00)</p>
-            <ul>
-                <li>Graduate School of Engineering Student Ambassador, campus events & outreach.</li>
-                <li>Academic and Student Merit Scholarships (Spring 2024, Fall 2024).</li>
-            </ul>
+            <h1>Education</h1>
+            <div class="card">
+                <h2>Santa Clara University, California</h2>
+                <p>Master of Science in Computer Science and Engineering (Sep 2023 – Jun 2025)</p>
+                <ul>
+                    <li>GPA: 3.85/4.00</li>
+                    <li>Student Ambassador, Academic & Merit Scholarships</li>
+                </ul>
+            </div>
         </section>
         <section id="experience" class="section">
-            <h2>Professional Experience</h2>
-            <div>
-                <span class="exp-role">AI-Powered Software Development Intern</span> @ <span class="exp-company">TipTop Technologies, Sunnyvale, CA, USA</span> <span class="exp-date">(Apr 2025 – Present)</span>
-                <ul class="exp-list">
+            <h1>Experience</h1>
+            <div class="card">
+                <h2>TipTop Technologies, Sunnyvale, CA</h2>
+                <h3>AI-Powered Software Development Intern <span>(Apr 2025 – Present)</span></h3>
+                <ul>
                     <li>Developed Python scripts using Apify API for scalable, automated video content aggregation.</li>
                     <li>Built PoC and MVP for AI solutions, collaborating with clients for integration and delivery.</li>
                     <li>Containerized apps with Docker and designed CI/CD pipelines for streamlined deployment.</li>
                 </ul>
             </div>
-            <div>
-                <span class="exp-role">Software Engineer Intern</span> @ <span class="exp-company">Dover Fueling Solutions, Austin, TX, USA</span> <span class="exp-date">(Jun 2024 – Dec 2024)</span>
-                <ul class="exp-list">
+            <div class="card">
+                <h2>Dover Fueling Solutions, Austin, TX</h2>
+                <h3>Software Engineer Intern <span>(Jun 2024 – Dec 2024)</span></h3>
+                <ul>
                     <li>Developed automation models, CI/CD pipelines, and log management for QA team.</li>
                     <li>Created log validation ETL tool, boosting productivity and accuracy by 99%.</li>
                     <li>Hands-on with networking hardware, Splunk PoC, and Azure services.</li>
                 </ul>
             </div>
-            <div>
-                <span class="exp-role">Operations Engineer, Customer Success</span> @ <span class="exp-company">Sumo Logic, Bengaluru, India / Redwood City, CA</span> <span class="exp-date">(Aug 2021 – Aug 2023)</span>
-                <ul class="exp-list">
+            <div class="card">
+                <h2>Sumo Logic, Bengaluru, India / Redwood City, CA</h2>
+                <h3>Operations Engineer, Customer Success <span>(Aug 2021 – Aug 2023)</span></h3>
+                <ul>
                     <li>Developed ETL automation scripts and managed CI/CD, Docker, Kubernetes, Helm, ECS, EKS.</li>
                     <li>Integrated AWS CodePipeline with GitHub for automated deployments.</li>
                     <li>Created reusable Terraform modules, boosting team productivity by 60%.</li>
@@ -99,30 +82,73 @@
                     <li>Presented custom-built product at Sales Kickoff; received 'One Single Agenda' award.</li>
                 </ul>
             </div>
-            <div>
-                <span class="exp-role">Associate Software Engineer</span> @ <span class="exp-company">CloudifyOps Pvt. Ltd, Bengaluru, India</span> <span class="exp-date">(Dec 2020 – Jul 2021)</span>
-                <ul class="exp-list">
+            <div class="card">
+                <h2>CloudifyOps Pvt. Ltd, Bengaluru, India</h2>
+                <h3>Associate Software Engineer <span>(Dec 2020 – Jul 2021)</span></h3>
+                <ul>
                     <li>Led AWS DataSync migration project, developed automation scripts for file system migration.</li>
                     <li>Developed cost analysis strategies, reducing AWS costs by 60%.</li>
                 </ul>
             </div>
-            <div>
-                <span class="exp-role">Technical Consultant</span> @ <span class="exp-company">Prodevans Technologies, India</span> <span class="exp-date">(Jul 2020 – Dec 2020)</span>
-                <ul class="exp-list">
+            <div class="card">
+                <h2>Prodevans Technologies, India</h2>
+                <h3>Technical Consultant <span>(Jul 2020 – Dec 2020)</span></h3>
+                <ul>
                     <li>Worked on ML project (Iventura), data analytics, and visualization.</li>
                     <li>Intern: Docker, Containers, HTML, CSS, RedHat Linux (RHCE & RHCSA).</li>
                 </ul>
             </div>
         </section>
         <section id="projects" class="section">
-            <h2>Projects</h2>
-            <ul class="projects">
-                <li>Kubernetes operator in Golang for dynamic config updates in microservices.</li>
-                <li>AttendEase: ML-based face identification attendance system with data visualization.</li>
-                <li>Computer Networks: Encryption techniques research, TCP/UDP, Wireshark, etc.</li>
+            <h1>Projects</h1>
+            <div class="card-grid">
+                <div class="card">
+                    <h2>Kubernetes Operator in Golang</h2>
+                    <p>Automates dynamic environment variable updates for microservices based on ConfigMap changes.</p>
+                </div>
+                <div class="card">
+                    <h2>AttendEase</h2>
+                    <p>ML-based face identification attendance system with data visualization (Python, OpenCV, Matplotlib, Plotly).</p>
+                </div>
+                <div class="card">
+                    <h2>Computer Networks</h2>
+                    <p>Encryption techniques research, TCP/UDP, Wireshark, etc.</p>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="section">
+            <h1>Skills</h1>
+            <div class="card-grid">
+                <div class="card"><h3>Languages</h3><p>Python, Java, GoLang, SQL, Shell scripting, HTML, CSS</p></div>
+                <div class="card"><h3>Cloud</h3><p>AWS (EC2, ECS, EKS, Lambda, S3, SES, CodePipeline, DataSync, FSx, EFS, Rekognition), Azure (Compute, Storage, Database, DevOps)</p></div>
+                <div class="card"><h3>DevOps</h3><p>Docker, Kubernetes, Helm, Terraform, Ansible, GitHub Actions, Bitbucket Pipelines, Azure DevOps</p></div>
+                <div class="card"><h3>Data & ETL</h3><p>Snowflake, PostgreSQL, ETL pipelines, Pandas, NumPy, Apify API, Matplotlib, Plotly</p></div>
+                <div class="card"><h3>Monitoring</h3><p>Splunk, Sumo Logic, Datadog</p></div>
+                <div class="card"><h3>ML & Vision</h3><p>OpenCV, Face Recognition, Data Visualization</p></div>
+                <div class="card"><h3>OS & Tools</h3><p>Linux, macOS, Windows, Wireshark, Django, JIRA, Apify</p></div>
+            </div>
+        </section>
+        <section id="certifications" class="section">
+            <h1>Certifications</h1>
+            <ul class="cert-list">
+                <li><i class="fa fa-certificate"></i> AWS Certified Cloud Practitioner</li>
+                <li><i class="fa fa-certificate"></i> Hashicorp Certified: Terraform Associate (003)</li>
+                <li><i class="fa fa-certificate"></i> Salesforce: Certified Administrator</li>
+                <li><i class="fa fa-certificate"></i> Salesforce: Certified AI Associate</li>
+                <li><i class="fa fa-certificate"></i> Microsoft Certified: Azure Fundamentals</li>
+                <li><i class="fa fa-certificate"></i> Sumo Logic: Fundamentals, Administration, Kubernetes, Metrics Mastery, Search Mastery, Security and Analytics Certified</li>
             </ul>
         </section>
-    </div>
+        <section id="contact" class="section">
+            <h1>Contact</h1>
+            <div class="contact-grid">
+                <div><i class="fa fa-envelope"></i> pavankumarrs099@gmail.com</div>
+                <div><i class="fa fa-phone"></i> +1 (669) 281-9218</div>
+                <div><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/p4v4n/" target="_blank">LinkedIn</a></div>
+                <div><i class="fab fa-github"></i> <a href="https://github.com/P4v4n5" target="_blank">GitHub</a></div>
+            </div>
+        </section>
+    </main>
     <script src="/static/script.js"></script>
 </body>
 </html>

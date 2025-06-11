@@ -1,17 +1,25 @@
-function navigateTo(sectionId) {
-    // Hide all sections
+
+function showSection(hash) {
+    const id = (hash || '#about').replace('#', '');
     document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-    // Show the selected section
-    document.getElementById(sectionId).classList.add('active');
-    // Update nav button active state
-    document.querySelectorAll('.nav-links button').forEach(btn => btn.classList.remove('active'));
-    const navBtns = document.querySelectorAll('.nav-links button');
-    const ids = ['about','certifications','skills','education','experience','projects'];
-    ids.forEach((id, idx) => {
-        if (id === sectionId) navBtns[idx].classList.add('active');
-    });
+    const section = document.getElementById(id);
+    if (section) section.classList.add('active');
+    document.querySelectorAll('.side-nav .nav-link').forEach(link => link.classList.remove('active'));
+    const nav = document.querySelector('.side-nav .nav-link[href="#' + id + '"]');
+    if (nav) nav.classList.add('active');
 }
-// Set default section on load
-window.onload = function() {
-    navigateTo('about');
-};
+
+window.addEventListener('DOMContentLoaded', function() {
+    showSection(window.location.hash);
+    document.querySelectorAll('.side-nav .nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const hash = this.getAttribute('href');
+            window.location.hash = hash;
+            showSection(hash);
+        });
+    });
+    window.addEventListener('hashchange', function() {
+        showSection(window.location.hash);
+    });
+});

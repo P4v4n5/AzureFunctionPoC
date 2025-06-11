@@ -1,145 +1,212 @@
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(120deg, #f4f6fb 60%, #e3e9f7 100%);
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #f6f8fc;
     margin: 0;
     padding: 0;
     color: #222;
 }
-.navbar {
-    background: #2a3a5e;
-    box-shadow: 0 2px 8px #d1d9e6;
-    padding: 0.5rem 0;
-    position: sticky;
+.sidebar {
+    position: fixed;
+    left: 0;
     top: 0;
-    z-index: 100;
-}
-.nav-container {
-    max-width: 900px;
-    margin: 0 auto;
+    width: 260px;
+    height: 100vh;
+    background: #f4f6fb;
+    box-shadow: 2px 0 16px #e3e9f7;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
+    z-index: 10;
 }
-.nav-logo {
-    color: #fff;
-    font-size: 1.3rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
-}
-.nav-links button {
-    background: #fff;
-    color: #2a3a5e;
-    border: none;
-    border-radius: 6px;
-    padding: 7px 16px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-}
-.nav-links button:hover, .nav-links button.active {
-    background: #3b5998;
-    color: #fff;
-}
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 24px #d1d9e6;
-    padding: 40px 32px;
-}
-.profile-header {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    border-bottom: 2px solid #eaeaea;
-    padding-bottom: 24px;
+.profile {
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 24px;
 }
 .profile-pic {
-    width: 140px;
-    border-radius: 12px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
     box-shadow: 0 2px 8px #aaa;
+    margin-bottom: 12px;
 }
-.profile-info {
-    flex: 1;
-}
-.profile-info h1 {
-    margin: 0 0 8px 0;
-    font-size: 2.5rem;
+.profile h2 {
+    margin: 0;
+    font-size: 1.3rem;
     color: #2a3a5e;
 }
-.profile-info p {
-    margin: 0 0 8px 0;
-    font-size: 1.1rem;
+.subtitle {
+    color: #888;
+    font-size: 1rem;
+    margin-top: 2px;
 }
-.links a {
-    margin-right: 16px;
-    color: #3b5998;
+.side-nav {
+    width: 100%;
+}
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.side-nav li {
+    width: 100%;
+}
+.side-nav .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 32px;
+    color: #2a3a5e;
     text-decoration: none;
     font-weight: 500;
+    font-size: 1.05rem;
+    border-left: 4px solid transparent;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
-.links a:hover {
-    text-decoration: underline;
+.side-nav .nav-link.active, .side-nav .nav-link:hover {
+    background: #e6eaff;
+    border-left: 4px solid #6c63ff;
+    color: #6c63ff;
 }
-h2 {
+.side-footer {
+    margin-top: auto;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+}
+.side-footer a {
     color: #2a3a5e;
-    margin-top: 32px;
-    border-bottom: 1px solid #eaeaea;
-    padding-bottom: 6px;
+    font-size: 1.2rem;
+    transition: color 0.2s;
 }
-ul, ol {
-    margin: 8px 0 16px 24px;
+.side-footer a:hover {
+    color: #6c63ff;
+}
+.main-content {
+    margin-left: 260px;
+    padding: 40px 48px 40px 48px;
+    min-height: 100vh;
 }
 .section {
-    margin-bottom: 28px;
     display: none;
     animation: fadeIn 0.5s;
+    margin-bottom: 40px;
 }
 .section.active {
     display: block;
 }
-.certs, .skills, .projects {
+h1 {
+    color: #6c63ff;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    border-bottom: 2px solid #e6eaff;
+    padding-bottom: 6px;
+}
+h2 {
+    color: #2a3a5e;
+    font-size: 1.2rem;
+    margin: 0 0 8px 0;
+}
+h3 {
+    color: #3b5998;
+    font-size: 1.05rem;
+    margin: 0 0 6px 0;
+    font-weight: 600;
+}
+blockquote {
+    background: #e6eaff;
+    color: #6c63ff;
+    font-style: italic;
+    border-left: 4px solid #6c63ff;
+    margin: 0 0 18px 0;
+    padding: 12px 18px;
+    border-radius: 6px;
+}
+.card, .card-grid .card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px #e3e9f7;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+}
+.card-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 18px;
 }
-.certs li, .skills li, .projects li {
+.card-grid .card {
+    flex: 1 1 260px;
+    min-width: 220px;
+    max-width: 320px;
+}
+.cert-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.cert-list li {
     background: #f0f4fa;
     border-radius: 6px;
-    padding: 6px 14px;
-    margin-bottom: 6px;
-    list-style: none;
+    padding: 10px 16px;
+    font-size: 1.05rem;
+    color: #2a3a5e;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     box-shadow: 0 1px 4px #e3e9f7;
 }
-.exp-role {
-    font-weight: bold;
-    color: #1a2a4f;
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 18px;
 }
-.exp-company {
-    color: #3b5998;
-    font-weight: 500;
+.contact-grid div {
+    background: #f0f4fa;
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-size: 1.05rem;
+    color: #2a3a5e;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 1px 4px #e3e9f7;
 }
-.exp-date {
-    color: #888;
-    font-size: 0.95em;
-}
-.exp-list {
-    margin-top: 6px;
-}
-@media (max-width: 700px) {
-    .container { padding: 16px; }
-    .profile-header { flex-direction: column; gap: 12px; text-align: center; }
-    .profile-pic { width: 100px; }
-    .nav-container { flex-direction: column; gap: 8px; }
+@media (max-width: 900px) {
+    .main-content {
+        margin-left: 0;
+        padding: 24px 8px 24px 8px;
+    }
+    .sidebar {
+        position: static;
+        width: 100vw;
+        height: auto;
+        flex-direction: row;
+        box-shadow: none;
+        border-bottom: 1px solid #e3e9f7;
+    }
+    .side-nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        justify-content: center;
+    }
+    .side-nav .nav-link {
+        padding: 10px 10px;
+        border-left: none;
+        border-bottom: 4px solid transparent;
+    }
+    .side-nav .nav-link.active, .side-nav .nav-link:hover {
+        border-left: none;
+        border-bottom: 4px solid #6c63ff;
+    }
+    .side-footer {
+        margin: 0 0 0 auto;
+    }
 }
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
