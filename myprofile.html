@@ -1,153 +1,149 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pavan Kumar Srinivasulu | Portfolio</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            background-color: #f0f4f8;
-        }
-        .sidebar {
-            width: 250px;
-            background-color: white;
-            padding: 2rem;
-            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-            height: 100vh;
-        }
-        .sidebar h1 {
-            font-size: 20px;
-            margin-bottom: 5px;
-        }
-        .sidebar p {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 30px;
-        }
-        .sidebar a {
-            display: block;
-            margin: 10px 0;
-            color: #444;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .content {
-            flex: 1;
-            padding: 2rem;
-            overflow-y: auto;
-        }
-        .card {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        }
-        .card h2 {
-            margin-bottom: 1rem;
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 1rem;
-        }
-        .skill-box {
-            background: #e0e7ff;
-            padding: 1rem;
-            text-align: center;
-            border-radius: 8px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pavan Kumar Srinivasulu | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      background-color: #f0f4f8;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: white;
+      padding: 2rem;
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+      height: 100vh;
+    }
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1rem auto;
+      display: block;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .sidebar h1 {
+      font-size: 20px;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+    .sidebar p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .sidebar a {
+      display: block;
+      margin: 10px 0;
+      color: #444;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .content {
+      flex: 1;
+      padding: 2rem;
+      overflow-y: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    .card h2 {
+      margin-bottom: 1rem;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+    .skill-box {
+      background: #e0e7ff;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
-    <div class="sidebar">
-        <img src="/static/MyImg.jpg" alt="Profile Picture" class="profile-pic">
-        <h1>Pavan Kumar Srinivasulu</h1>
-        <p>Software Engineer | Cloud & DevOps</p>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </div>
-    <div class="content">
-        <section id="about" class="card">
-            <h2>About Me</h2>
-            <p>Cloud and DevOps Engineer with 4+ years of experience in backend development, automation, infrastructure as code, and machine learning applications. Adept at designing scalable, cost-effective cloud solutions and building automation tools for real-world use cases.</p>
-        </section>
-        <section id="skills" class="card">
-            <h2>Certifications</h2>
-            <ul>
-                <li>AWS Certified Cloud Practitioner</li>
-                <li>Hashicorp Certified: Terraform Associate</li>
-                <li>Salesforce Certified Administrator & AI Associate</li>
-                <li>Microsoft Certified: Azure Fundamentals</li>
-                <li>Sumo Logic: Search, Metrics, Admin & Security Certifications</li>
-            </ul>
-        </section>
-        <section class="card">
-            <h2>Technology Stack</h2>
-            <div class="skills-grid">
-                <div class="skill-box">Python</div>
-                <div class="skill-box">GoLang</div>
-                <div class="skill-box">Java</div>
-                <div class="skill-box">Terraform</div>
-                <div class="skill-box">Docker</div>
-                <div class="skill-box">Kubernetes</div>
-                <div class="skill-box">AWS</div>
-                <div class="skill-box">Azure</div>
-                <div class="skill-box">CI/CD</div>
-                <div class="skill-box">Machine Learning</div>
-            </div>
-        </section>
-        <section id="education" class="card">
-            <h2>Education</h2>
-            <p><strong>Santa Clara University</strong> — MS in Computer Science and Engineering (2023–2025)<br>GPA: 3.85</p>
-            <ul>
-                <li>Student Ambassador, Graduate School of Engineering</li>
-                <li>Merit Scholarships – Spring & Fall 2024</li>
-            </ul>
-        </section>
-        <section id="experience" class="card">
-            <h2>Experience</h2>
-            <p><strong>TipTop Technologies</strong> — AI Software Development Intern (Apr 2025 – Present)</p>
-            <ul>
-                <li>Built Apify-based scraping tools for social platforms</li>
-                <li>Delivered PoCs and MVPs tailored to customer requirements</li>
-                <li>Containerized apps and designed CI/CD pipelines</li>
-            </ul>
-            <p><strong>Dover Fueling Solutions</strong> — Software Engineer Intern (Jun 2024 – Dec 2024)</p>
-            <ul>
-                <li>Built automation models and log validation ETL tools</li>
-                <li>Led Splunk-based PoC and Azure integrations</li>
-            </ul>
-            <p><strong>Sumo Logic</strong> — Operations Engineer (Aug 2021 – Aug 2023)</p>
-            <ul>
-                <li>Automated ETL and AWS workflows using Python, Terraform</li>
-                <li>Built a full email renewal system used across the company</li>
-                <li>Led SIEM integration and presented at company events</li>
-            </ul>
-        </section>
-        <section id="projects" class="card">
-            <h2>Projects</h2>
-            <ul>
-                <li>Kubernetes Operator in Go for live ConfigMap updates</li>
-                <li>Fake Job Detection using GloVe, XGBoost, One-Class SVM</li>
-                <li>AttendEase – Face Recognition Attendance System</li>
-                <li>Encryption Research (TCP, UDP, Wireshark)</li>
-            </ul>
-        </section>
-        <section id="contact" class="card">
-            <h2>Contact</h2>
-            <p>Email: pavankumarrs099@gmail.com</p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/p4v4n" target="_blank">linkedin.com/in/p4v4n</a></p>
-            <p>GitHub: <a href="https://github.com/P4v4n5" target="_blank">github.com/P4v4n5</a></p>
-        </section>
-    </div>
+  <div class="sidebar">
+    <img src="/api/static/MyImg.jpg" alt="Profile Picture" class="profile-pic" />
+    <h1>Pavan Kumar Srinivasulu</h1>
+    <p>Software Engineer | Cloud & DevOps</p>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="content">
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>Cloud and DevOps Engineer with 4+ years of experience in backend development, automation, infrastructure as code, and machine learning applications.</p>
+    </section>
+    <section id="skills" class="card">
+      <h2>Certifications</h2>
+      <ul>
+        <li>AWS Certified Cloud Practitioner</li>
+        <li>Hashicorp Certified: Terraform Associate</li>
+        <li>Salesforce Certified Administrator & AI Associate</li>
+        <li>Microsoft Certified: Azure Fundamentals</li>
+        <li>Sumo Logic: Search, Metrics, Admin & Security Certifications</li>
+      </ul>
+    </section>
+    <section class="card">
+      <h2>Technology Stack</h2>
+      <div class="skills-grid">
+        <div class="skill-box">Python</div>
+        <div class="skill-box">GoLang</div>
+        <div class="skill-box">Java</div>
+        <div class="skill-box">Terraform</div>
+        <div class="skill-box">Docker</div>
+        <div class="skill-box">Kubernetes</div>
+        <div class="skill-box">AWS</div>
+        <div class="skill-box">Azure</div>
+        <div class="skill-box">CI/CD</div>
+        <div class="skill-box">Machine Learning</div>
+      </div>
+    </section>
+    <section id="education" class="card">
+      <h2>Education</h2>
+      <p><strong>Santa Clara University</strong> — MS in Computer Science and Engineering (2023–2025)</p>
+      <ul>
+        <li>Student Ambassador, Graduate School of Engineering</li>
+        <li>Merit Scholarships – Spring & Fall 2024</li>
+      </ul>
+    </section>
+    <section id="experience" class="card">
+      <h2>Experience</h2>
+      <p><strong>TipTop Technologies</strong> — AI Software Development Intern</p>
+      <p><strong>Dover Fueling Solutions</strong> — Software Engineer Intern</p>
+      <p><strong>Sumo Logic</strong> — Operations Engineer</p>
+    </section>
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <ul>
+        <li>Kubernetes Operator</li>
+        <li>Fake Job Detector</li>
+        <li>AttendEase</li>
+        <li>Encryption Research</li>
+      </ul>
+    </section>
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Email: pavankumarrs099@gmail.com</p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/p4v4n" target="_blank">linkedin.com/in/p4v4n</a></p>
+      <p>GitHub: <a href="https://github.com/P4v4n5" target="_blank">github.com/P4v4n5</a></p>
+    </section>
+  </div>
 </body>
 </html>
