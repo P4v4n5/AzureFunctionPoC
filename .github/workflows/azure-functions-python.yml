@@ -8,6 +8,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -22,14 +23,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 🔐 NEW: Azure Login Step using publish profile
-      - name: Login to Azure
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
-
-      - name: Deploy to Azure Functions
+      - name: Deploy to Azure Function
         uses: Azure/functions-action@v1
         with:
-          app-name: func-copilot-pavan-1  # your Azure Function App name
+          app-name: func-copilot-pavan-1  # Replace with your Azure Function App name
+          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
           package: .
