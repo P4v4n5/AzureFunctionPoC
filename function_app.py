@@ -25,7 +25,7 @@ def AnimalFunction(req: func.HttpRequest) -> func.HttpResponse:
             </style>
         </head>
         <body>
-            <h1>Pavan</h1>
+            <h1>Pavan Kumar Srinivasulu</h1>
             <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Pavan's photo">
             <p>Welcome to my portfolio website!</p>
         </body>
