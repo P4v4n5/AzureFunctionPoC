@@ -4,7 +4,7 @@ import os
 
 app = func.FunctionApp()
 
-@app.route(route="static/{filename}", auth_level=func.AuthLevel.ANONYMOUS)
+@app.route(route="MyProfile", auth_level=func.AuthLevel.ANONYMOUS)
 def MyProfile(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('MyProfile HTTP trigger received a request.')
 
