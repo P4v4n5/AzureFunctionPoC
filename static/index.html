@@ -3,102 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pavan Kumar - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Gareshma Nagalapatti | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <aside class="sidebar">
         <div class="profile">
-            <div class="profile-pic"></div>
-            <h2>Pavan Kumar</h2>
-            <div class="subtitle">Cloud & DevOps Engineer</div>
+            <img src="avatar.png" alt="Profile Picture">
+            <h2>Gareshma Nagalapatti</h2>
+            <p>Software Engineer</p>
         </div>
-        <nav class="side-nav">
-            <ul>
-                <li><a href="#about" class="nav-link active"><i class="fas fa-user"></i>About</a></li>
-                <li><a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i>Education</a></li>
-                <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i>Experience</a></li>
-                <li><a href="#projects" class="nav-link"><i class="fas fa-code-branch"></i>Projects</a></li>
-                <li><a href="#skills" class="nav-link"><i class="fas fa-tools"></i>Skills</a></li>
-                <li><a href="#certifications" class="nav-link"><i class="fas fa-certificate"></i>Certifications</a></li>
-                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
-            </ul>
+        <nav class="menu">
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#research">Research</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
         </nav>
-        <div class="side-footer">
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+        <div class="contact-icons">
+            <a href="#"><img src="email-icon.svg" alt="Email"></a>
+            <a href="#"><img src="phone-icon.svg" alt="Phone"></a>
+            <a href="#"><img src="linkedin-icon.svg" alt="LinkedIn"></a>
         </div>
     </aside>
-
-    <main class="main-content">
-        <section id="about" class="section active">
+    <main class="content">
+        <section id="about" class="card">
             <h1>About Me</h1>
-            <blockquote>
-                "Cloud & DevOps Engineer with a passion for automation, scalable systems, and AI-powered solutions."
-            </blockquote>
-            <div class="skill-card">
-                <h3>Backend Development</h3>
-                <div class="details">Python, Java, Microservices</div>
-            </div>
-            <div class="skill-card">
-                <h3>Cloud & DevOps</h3>
-                <div class="details">Azure, Docker, CI/CD</div>
-            </div>
+            <blockquote>"Passionate software engineer with expertise in backend development and a research background in audio processing and speech recognition."</blockquote>
+            <p>I am a Computer Science graduate student at Santa Clara University with professional experience as a Software Engineer. My expertise spans backend development, data synchronization, and API integration, with a focus on creating efficient, scalable solutions.</p>
+            <p>I'm currently working as a Flutter Developer at the Frugal Innovation Center, building a bilingual math learning application. My research background includes work in audio indexing and speech recognition, demonstrating my interest in applying technology to solve practical problems.</p>
         </section>
-
-        <section id="education" class="section">
-            <h1>Education</h1>
-            <div class="education-item">
-                <div class="degree">Master of Science in Computer Science and Engineering</div>
-                <div class="school">Santa Clara University</div>
-                <div class="date">Sep 2023 - Jun 2025</div>
-                <div class="coursework">
-                    <span class="course-tag">GPA: 3.85/4.00</span>
-                    <span class="course-tag">Student Ambassador</span>
-                    <span class="course-tag">Academic & Merit Scholarships</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="section">
-            <h1>Experience</h1>
-            <div class="experience-item">
-                <div class="company">TipTop Technologies</div>
-                <div class="position">AI-Powered Software Development Intern</div>
-                <div class="date">Apr 2025 - Present</div>
-                <div class="bullet">
-                    <i class="fas fa-circle"></i>
-                    <div>Developed Python scripts using Apify API for scalable, automated video content aggregation.</div>
-                </div>
-                <div class="bullet">
-                    <i class="fas fa-circle"></i>
-                    <div>Built PoC and MVP for AI solutions, collaborating with clients for integration and delivery.</div>
-                </div>
-                <div class="bullet">
-                    <i class="fas fa-circle"></i>
-                    <div>Containerized apps with Docker and designed CI/CD pipelines for streamlined deployment.</div>
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <div class="company">Dover Fueling Solutions</div>
-                <div class="position">Software Engineer Intern</div>
-                <div class="date">Jun 2024 - Dec 2024</div>
-                <div class="bullet">
-                    <i class="fas fa-circle"></i>
-                    <div>Developed automation models, CI/CD pipelines, and log management for QA team.</div>
-                </div>
-                <div class="bullet">
-                    <i class="fas fa-circle"></i>
-                    <div>Created log validation ETL tool, boosting productivity and accuracy by 99%.</div>
-                </div>
-            </div>
-        </section>
+        <!-- Additional sections like Education, Experience, etc. will follow -->
     </main>
-
     <script src="script.js"></script>
 </body>
 </html>
