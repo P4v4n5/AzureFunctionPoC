@@ -1,7 +1,6 @@
 import azure.functions as func
-import datetime
-import json
 import logging
+import os
 
 app = func.FunctionApp()
 
@@ -9,26 +8,33 @@ app = func.FunctionApp()
 def MyProfile(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('MyProfile HTTP trigger received a request.')
 
-    method = req.method
-    if method == 'GET':
-        # Serve the new, beautiful HTML portfolio page
-        try:
-            with open('static/index.html', 'r', encoding='utf-8') as f:
-                html = f.read()
-            return func.HttpResponse(
-                html,
-                mimetype="text/html",
-                status_code=200
-            )
-        except Exception as e:
-            return func.HttpResponse(
-                f"<h1>Error loading portfolio page</h1><p>{str(e)}</p>",
-                mimetype="text/html",
-                status_code=500
-            )
-    else:
-        return func.HttpResponse(
-            json.dumps({"error": "Method not allowed."}),
-            mimetype="application/json",
-            status_code=405
-        )
+    try:
+        with open('static/index.html', 'r', encoding='utf-8') as f:
+            html = f.read()
+        return func.HttpResponse(html, mimetype="text/html")
+    except Exception as e:
+        return func.HttpResponse(f"<h1>Error loading page</h1><p>{e}</p>", status_code=500)
+
+# 🛠️ Add this route for serving static files (css, js, images)
+@app.route(route="static/{filename}", auth_level=func.AuthLevel.ANONYMOUS)
+def StaticFiles(req: func.HttpRequest, filename: str) -> func.HttpResponse:
+    try:
+        path = os.path.join("static", filename)
+        ext = os.path.splitext(filename)[1]
+        
+        # Basic content-type guessing
+        if ext == ".css":
+            mime = "text/css"
+        elif ext == ".js":
+            mime = "application/javascript"
+        elif ext in [".png", ".jpg", ".jpeg"]:
+            mime = "image/jpeg"
+        elif ext == ".svg":
+            mime = "image/svg+xml"
+        else:
+            mime = "application/octet-stream"
+
+        with open(path, "rb") as f:
+            return func.HttpResponse(f.read(), mimetype=mime)
+    except Exception as e:
+        return func.HttpResponse(f"File not found: {e}", status_code=404)
