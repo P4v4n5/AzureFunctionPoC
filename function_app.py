@@ -19,7 +19,7 @@ def MyProfile(req: func.HttpRequest) -> func.HttpResponse:
         return func.HttpResponse(f"<h1>Error:</h1><pre>{str(e)}</pre>", status_code=500)
 
 
-# Serve static files (like MyImg.jpg) from /static folder
+# Serve static files (like MyImg.jpg) from /static folder - 
 @app.route(route="static/{filename}", auth_level=func.AuthLevel.ANONYMOUS)
 def static_files(req: func.HttpRequest) -> func.HttpResponse:
     try:
